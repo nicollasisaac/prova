@@ -1,0 +1,94 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "BlazorProva API",
+    "description": "API para gerenciamento de produtos",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/curriculo": {
+      "post": {
+        "tags": [
+          "Curriculo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Curriculo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Curriculo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Curriculo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/curriculo/{id}": {
+      "get": {
+        "tags": [
+          "Curriculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Curriculo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "biografia": {
+            "type": "string",
+            "nullable": true
+          },
+          "habilidades": {
+            "type": "string",
+            "nullable": true
+          },
+          "links": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

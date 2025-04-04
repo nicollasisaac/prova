@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "BlazorProva.Controllers.CurriculoController",
+    "Method": "AddCurriculo",
+    "RelativePath": "api/curriculo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "curriculo",
+        "Type": "BlazorProva.Models.Curriculo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlazorProva.Controllers.CurriculoController",
+    "Method": "GetCurriculoPorID",
+    "RelativePath": "api/curriculo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
